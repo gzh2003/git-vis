@@ -1,0 +1,22 @@
+.flex-container-row {
+  display: flex;
+  justify-content: space-evenly;
+  height: 100vh;
+  width: 100vw;
+  padding: 50px;
+}
+
+.terminal-container {
+  display: flex;
+  width: 200px;
+  flex:1 0 auto;
+  flex-direction: column;
+  background-color: #2e3440;
+}
+
+.gitgraph-container {
+  width: 200px;
+  flex: 3 0 auto;
+  display: flex;
+  justify-content: center;
+}

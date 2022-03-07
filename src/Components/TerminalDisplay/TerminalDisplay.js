@@ -2,7 +2,7 @@ import "./TerminalDisplay.css";
 function TerminalDisplay(props) {
   const { termHist } = props;
   return (
-    <div>
+    <div className="terminal-display-container">
       {
       termHist.map((line, i) => {
         if (line.type === "command") {

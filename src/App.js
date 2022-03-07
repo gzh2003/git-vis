@@ -1,7 +1,11 @@
-import GraphVis from './GraphVis';
+import GraphVis from "./Components/GraphVis/GraphVis";
+import "./App.css";
+
 function App() {
   return (
-    <GraphVis />
+    <div className="App">
+      <GraphVis />
+    </div>
   );
 }
 

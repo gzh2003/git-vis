@@ -1,9 +1,9 @@
 /* eslint-disable default-case */
 import { useState, useRef } from "react";
 import { Gitgraph, templateExtend } from "@gitgraph/react";
-import cmdLib from "./utils/cmdLib";
-import TerminalDisplay from "./Components/TerminalDisplay/TerminalDisplay";
-import CommandEntry from "./Components/CommandEntry/CommandEntry";
+import cmdLib from "../../utils/cmdLib";
+import TerminalDisplay from "../TerminalDisplay/TerminalDisplay";
+import CommandEntry from "../CommandEntry/CommandEntry";
 import initDefaults, {
   cmdConfigGlobalName,
   cmdConfigGlobalEmail,
@@ -16,8 +16,9 @@ import initDefaults, {
   cmdBranch,
   cmdTag,
   cmdLog,
-} from "./utils/cmds";
-import CommandError from "./utils/CommandError";
+} from "../../utils/cmds";
+import CommandError from "../../utils/CommandError";
+import "./GraphVis.css";
 
 const getTokens = (string) => {
   const quotedString = string.match(/(["'`].*["'`])/g);
@@ -95,26 +96,27 @@ function GraphVis() {
     }
     setTermHist([...termHistRef.current]);
   };
+  
   return (
-    <div className="App">
+    <div className="graphvis-container flex-container-row">
       <div className="terminal-container">
         <TerminalDisplay termHist={termHist} />
         <CommandEntry handleKeyUp={handleCommandEntryKeypress} />
       </div>
       <div className="gitgraph-container">
-        <Gitgraph
-          options={{
-            orientation: "vertical-reverse",
-            template: templateExtend("metro", {
-              colors: ["#9e9e9e", "#36C5F0", "#2EB67D", "#E01E5A", "#ECB22E"],
-            }),
-          }}
-        >
-          {(gitgraph) => {
-            initDefaults(gitgraph);
-            cmdCommit("Initial Commit");
-          }}
-        </Gitgraph>
+          <Gitgraph
+            options={{
+              orientation: "vertical-reverse",
+              template: templateExtend("metro", {
+                colors: ["#9e9e9e", "#36C5F0", "#2EB67D", "#E01E5A", "#ECB22E"],
+              }),
+            }}
+          >
+            {(gitgraph) => {
+              initDefaults(gitgraph);
+              cmdCommit("Initial Commit");
+            }}
+          </Gitgraph>
       </div>
     </div>
   );
