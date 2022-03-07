@@ -1,0 +1,11 @@
+.command{
+    color: purple;
+}
+
+.standard{
+    color: grey;
+}
+
+.error{
+    color:red;
+}
