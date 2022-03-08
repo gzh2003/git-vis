@@ -1,7 +1,7 @@
 .App {
   display: flex;
   flex-direction: column;
-  background-color: #d8dee9;
+  background-color: #f4f4f5;
   align-items: center;
   justify-content: center;
 }

@@ -93,14 +93,13 @@ const cmdAddTag = (tag) => {
     branches[headPointer].tag(tag);
     tags.push(tag);
   } catch (e) {
-    if (
-      e.toString() ===
-      `Error: The ref "${headPointer}" does not exist`
-    ){
-      throw new Error("GitVis requires that a branch have a commit before adding a label.");
-    }else{
+    if (e.toString() === `Error: The ref "${headPointer}" does not exist`) {
+      throw new Error(
+        "GitVis requires that a branch have a commit before adding a label."
+      );
+    } else {
       throw e;
-    };
+    }
   }
 };
 
@@ -119,6 +118,7 @@ const cmdLog = () => {
     lines.push(`Author: ${commit.name} ${commit.email}`);
     lines.push("Date:" + commit.time);
     lines.push(commit.msg);
+    lines.push("--");
   }
   return lines;
 };

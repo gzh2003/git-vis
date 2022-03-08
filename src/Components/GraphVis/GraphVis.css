@@ -1,22 +1,77 @@
-.flex-container-row {
+.graphvis-container {
   display: flex;
-  justify-content: space-evenly;
   height: 100vh;
   width: 100vw;
-  padding: 50px;
+  padding: 30px;
+}
+
+.flex-container {
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.terminal-container,
+.gitgraph-container {
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
 .terminal-container {
   display: flex;
   width: 200px;
-  flex:1 0 auto;
+  flex: 1 0 auto;
   flex-direction: column;
   background-color: #2e3440;
+  margin: 10px;
 }
 
 .gitgraph-container {
   width: 200px;
+  margin: 10px;
   flex: 3 0 auto;
   display: flex;
   justify-content: center;
+  background-color: #fefefe;
+  overflow: auto;
+  scrollbar-color: #888 #f1f1f1;
+  scrollbar-width: thin;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+@media only screen and (max-width: 700px) {
+  .flex-container {
+    flex-direction: column-reverse;
+    align-items: stretch;
+    justify-content: center;
+  }
+  .terminal-container {
+    display: flex;
+    width: 100%;
+    height: 200px;
+    flex: 4 0 auto;
+    flex-direction: column;
+    background-color: #2e3440;
+  }
+
+  .gitgraph-container {
+    width: 100%;
+    height: 200px;
+    flex: 5 0 auto;
+    display: flex;
+    justify-content: center;
+  }
 }
