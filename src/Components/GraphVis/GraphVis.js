@@ -1,5 +1,4 @@
-/* eslint-disable default-case */
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef } from "react";
 import { Gitgraph, templateExtend } from "@gitgraph/react";
 import cmdLib from "../../utils/cmdLib";
 import TerminalDisplay from "../TerminalDisplay/TerminalDisplay";
@@ -117,25 +116,6 @@ function GraphVis() {
         >
           {(gitgraph) => {
             initDefaults(gitgraph);
-            cmdCommit("Initial Commit");
-            cmdCommit("Initial Commit");
-            cmdCommit("Initial Commit");
-            cmdAddBranch("a");
-            cmdCheckout("a");
-            cmdCommit("Initial Commit");
-            cmdAddBranch("b");
-            cmdCheckout("b");
-            cmdCommit("Initial Commit");
-            cmdAddBranch("c");
-            cmdCheckout("c");
-            cmdCommit("Initial Commit");
-            cmdAddBranch("d");
-            cmdCheckout("d");
-            cmdCommit("Initial Commit");
-            cmdCheckout("main");
-            cmdCommit("Initial Commit");
-            cmdCommit("Initial Commit");
-            cmdCommit("Initial Commit");
           }}
         </Gitgraph>
       </div>
