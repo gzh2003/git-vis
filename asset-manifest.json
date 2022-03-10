@@ -1,13 +1,10 @@
 {
   "files": {
-    "main.css": "/git-vis/static/css/main.8e753667.css",
-    "main.js": "/git-vis/static/js/main.3f2eeb73.js",
+    "main.js": "/git-vis/static/js/main.dd14dcd8.js",
     "index.html": "/git-vis/index.html",
-    "main.8e753667.css.map": "/git-vis/static/css/main.8e753667.css.map",
-    "main.3f2eeb73.js.map": "/git-vis/static/js/main.3f2eeb73.js.map"
+    "main.dd14dcd8.js.map": "/git-vis/static/js/main.dd14dcd8.js.map"
   },
   "entrypoints": [
-    "static/css/main.8e753667.css",
-    "static/js/main.3f2eeb73.js"
+    "static/js/main.dd14dcd8.js"
   ]
 }
