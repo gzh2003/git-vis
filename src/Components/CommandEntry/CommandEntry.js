@@ -1,19 +1,16 @@
-import "./CommandEntry.css";
+import { Input, InputLeftAddon, InputGroup } from "@chakra-ui/react";
 
 function CommandEntry(props) {
   const { handleKeyUp } = props;
   return (
-    <div className="command-entry-container">
-      <input
-        size="1"
-        className="command-entry"
+    <InputGroup>
+      <InputLeftAddon color="grey" children=">" />
+      <Input
         onKeyUp={handleKeyUp}
         type="text"
-        id="command-input"
-        name="command-input"
+        placeholder="Enter Commands Here"
       />
-      <p className="command-symbol">&gt;</p>
-    </div>
+    </InputGroup>
   );
 }
 

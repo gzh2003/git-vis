@@ -1,11 +1,14 @@
 import GraphVis from "./Components/GraphVis/GraphVis";
-import "./App.css";
+import { ChakraProvider, Center } from "@chakra-ui/react";
+import theme from "./utils/theme/theme";
 
 function App() {
   return (
-    <div className="App">
-      <GraphVis />
-    </div>
+    <ChakraProvider theme={theme}>
+      <Center w="100vw" bg="#f4f4f5">
+        <GraphVis />
+      </Center>
+    </ChakraProvider>
   );
 }
 

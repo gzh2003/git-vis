@@ -1,5 +1,5 @@
+import { Stack, Code } from "@chakra-ui/react";
 import { useRef, useEffect } from "react";
-import "./TerminalDisplay.css";
 function TerminalDisplay(props) {
   const { termHist } = props;
   const scrollToBottom = () => {
@@ -12,31 +12,18 @@ function TerminalDisplay(props) {
 
   const terminalEndRef = useRef(null);
   return (
-    <div className="terminal-display-container">
+    <Stack spacing="3">
       {termHist.map((line, i) => {
         if (line.type === "command") {
-          return (
-            <div key={i} className="command">
-              <p className="command-symbol">&gt;</p>
-              {line.content}
-            </div>
-          );
+          return <Code key={i} colorScheme={"green"}>{line.content}</Code>;
         } else if (line.type === "error") {
-          return (
-            <div key={i} className="error">
-              {line.content}
-            </div>
-          );
+          return <Code key={i} colorScheme={"red"}>{line.content}</Code>;
         } else {
-          return (
-            <div key={i} className="standard">
-              {line.content}
-            </div>
-          );
+          return <Code key={i}>{line.content}</Code>;
         }
       })}
       <div ref={terminalEndRef}></div>
-    </div>
+    </Stack>
   );
 }
 

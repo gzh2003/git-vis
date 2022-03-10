@@ -118,7 +118,6 @@ const cmdLog = () => {
     lines.push(`Author: ${commit.name} ${commit.email}`);
     lines.push("Date:" + commit.time);
     lines.push(commit.msg);
-    lines.push("--");
   }
   return lines;
 };
