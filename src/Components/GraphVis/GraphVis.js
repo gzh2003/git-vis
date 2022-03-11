@@ -1,4 +1,4 @@
-import { Flex, Box    } from "@chakra-ui/react";
+import { Flex, Box } from "@chakra-ui/react";
 import { useEffect, useState, useRef, createRef } from "react";
 import { Gitgraph, templateExtend } from "@gitgraph/react";
 import cmdLib from "../../utils/cmdLib";
@@ -16,6 +16,7 @@ import initDefaults, {
   cmdBranch,
   cmdTag,
   cmdLog,
+  cmdGitVisHelp,
 } from "../../utils/cmds";
 import CommandError from "../../utils/CommandError";
 
@@ -69,6 +70,8 @@ const getCmd = (command, cmdLib) => {
           return cmdTag();
         case "log":
           return cmdLog();
+        case "gitVisHelp":
+          return cmdGitVisHelp();
       }
     }
   }
@@ -112,6 +115,11 @@ const useScale = (wrapper, container) => {
 
 function GraphVis() {
   const [termHist, setTermHist] = useState([
+    { type: "standard", content: 'Git Vision is a tool to help you visualise common git commands.' },
+    { type: "standard", content: 'Adding and staging files is not supported by this program. Treat the environment as a "commit-ready" setup, where files are already staged for commits.' },
+    { type: "standard", content: 'For a list of available commands type "gitVis --help"' },
+    { type: "standard", content: 'To clear the console, simply enter the command "reset"' },
+    { type: "standard", content: '' },
     { type: "command", content: "git init" },
     { type: "command", content: 'git commit -m "Intial Commit"' },
   ]);
@@ -124,6 +132,11 @@ function GraphVis() {
   const handleCommandEntryKeypress = (e) => {
     if (!(e.key === "Enter")) return;
     if (e.target.value === "") return;
+    if(e.target.value === "reset"){
+      termHistRef.current = [];
+      setTermHist(termHistRef.current);
+      return;
+    }
     termHistRef.current.push({ type: "command", content: e.target.value });
     try {
       const lines = getCmd(e.target.value, cmdLib);
@@ -189,7 +202,7 @@ function GraphVis() {
               mode: "compact",
               orientation: "horizontal",
               template: templateExtend("metro", {
-                colors: ["#b0bec5", "#b39ddb", "#4fc3f7", "#ffa726", "#d4e157"],
+                colors: ["#b39ddb", "#4fc3f7", "#ffa726", "#d4e157"],
               }),
             }}
           >

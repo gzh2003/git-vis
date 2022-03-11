@@ -3,6 +3,7 @@ const cmdLib = {
     { tokens: ["git", "branch"], key: "branch" },
     { tokens: ["git", "tag"], key: "tag" },
     { tokens: ["git", "log"], key: "log" },
+    {tokens:["gitVis","--help"], key: "gitVisHelp"}
   ],
   3: [
     { tokens: ["git", "branch", "[]"], key: "addBranch" },

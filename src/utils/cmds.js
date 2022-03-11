@@ -122,6 +122,29 @@ const cmdLog = () => {
   return lines;
 };
 
+const cmdGitVisHelp = () => {
+  const message = [];
+  message.push(
+    "Git Vision is a tool to help you visualise common git commands."
+  );
+  message.push("It currently supports the following git commands:");
+  message.push("git config --global user.name [name]");
+  message.push("git config --global user.email [email]");
+  message.push("git commit -m [message]");
+  message.push("git branch [branch name]");
+  message.push("git merge [branch name]");
+  message.push("git branch -d [branch name]");
+  message.push("git checkout [branch name]");
+  message.push("git branch");
+  message.push("git tag [tag name]");
+  message.push("git tag");
+  message.push("git log");
+  message.push("Along with these helper commands:");
+  message.push("gitVis -- help");
+  message.push("reset");
+  return message;
+};
+
 export default initDefaults;
 
 export {
@@ -136,4 +159,5 @@ export {
   cmdBranch,
   cmdTag,
   cmdLog,
+  cmdGitVisHelp,
 };
