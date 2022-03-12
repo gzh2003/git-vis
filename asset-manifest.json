@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.js": "/git-vis/static/js/main.afbe4add.js",
-    "index.html": "/git-vis/index.html",
-    "main.afbe4add.js.map": "/git-vis/static/js/main.afbe4add.js.map"
+    "main.js": "/git-vision/static/js/main.afbe4add.js",
+    "index.html": "/git-vision/index.html",
+    "main.afbe4add.js.map": "/git-vision/static/js/main.afbe4add.js.map"
   },
   "entrypoints": [
     "static/js/main.afbe4add.js"
