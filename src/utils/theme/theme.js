@@ -9,14 +9,11 @@ const breakpoints = createBreakpoints({
   "2xl": "1600px",
 });
 
-const styles = {
-  global: {
-    body: {
-      bg: "#f4f4f5",
-    },
-  },
+const config = {
+  initialColorMode: "light",
+  useSystemColorMode: false,
 };
 
-const theme = extendTheme({ breakpoints, styles });
+const theme = extendTheme({ breakpoints, config });
 
 export default theme;

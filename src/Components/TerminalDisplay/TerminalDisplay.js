@@ -15,11 +15,11 @@ function TerminalDisplay(props) {
     <Stack spacing="3">
       {termHist.map((line, i) => {
         if (line.type === "command") {
-          return <Code key={i} colorScheme={"green"}>{line.content}</Code>;
+          return <Code key={i} colorScheme={"green"} variant="subtle">{line.content}</Code>;
         } else if (line.type === "error") {
-          return <Code key={i} colorScheme={"red"}>{line.content}</Code>;
+          return <Code key={i} colorScheme={"red"} variant="subtle">{line.content}</Code>;
         } else {
-          return <Code key={i}>{line.content}</Code>;
+          return <Code key={i} variant="subtle">{line.content}</Code>;
         }
       })}
       <div ref={terminalEndRef}></div>
