@@ -21,5 +21,5 @@ Git Vision currently supports the following git commands:
 
 ### Miscellaneous
 Git Vision also supports the following "helper" commands:
-1.gitVis --help 
+1. gitVis --help 
 2. reset

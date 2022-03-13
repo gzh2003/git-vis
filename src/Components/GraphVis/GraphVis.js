@@ -202,7 +202,7 @@ function GraphVis() {
               mode: "compact",
               orientation: "horizontal",
               template: templateExtend("metro", {
-                colors: ["#b39ddb", "#4fc3f7", "#ffa726", "#d4e157"],
+                colors: ["#cbd5e0", "#fc8181", "#68d391", "#63b3ed","#6b46c1"],
               }),
             }}
           >
