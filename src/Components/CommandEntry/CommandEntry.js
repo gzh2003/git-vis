@@ -1,13 +1,12 @@
-import { Input, InputLeftAddon, InputGroup } from "@chakra-ui/react";
+import { Input, InputGroup } from "@chakra-ui/react";
 
 function CommandEntry(props) {
   const { handleKeyUp } = props;
   return (
     <InputGroup>
-      <InputLeftAddon color="grey" children=">" />
       <Input
         onKeyUp={handleKeyUp}
-        variant="outline"
+        variant="filled"
         type="text"
         placeholder="Enter Commands Here"
       />

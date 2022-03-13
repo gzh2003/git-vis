@@ -5,7 +5,7 @@ import theme from "./utils/theme/theme";
 function App() {
   return (
     <ChakraProvider theme={theme}>
-      <Center w="100vw" bg="#fff">
+      <Center w="100vw" bg="#f8f9fa">
         <GraphVis />
       </Center>
     </ChakraProvider>
