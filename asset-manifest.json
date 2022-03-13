@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.js": "/git-vision/static/js/main.afbe4add.js",
+    "main.js": "/git-vision/static/js/main.b28405e6.js",
     "index.html": "/git-vision/index.html",
-    "main.afbe4add.js.map": "/git-vision/static/js/main.afbe4add.js.map"
+    "main.b28405e6.js.map": "/git-vision/static/js/main.b28405e6.js.map"
   },
   "entrypoints": [
-    "static/js/main.afbe4add.js"
+    "static/js/main.b28405e6.js"
   ]
 }
