@@ -2,6 +2,7 @@
 
 [Git-vision](https://gzh2003.github.io/git-vision/) is an interactive Git sandbox that aims to provide users with a better understanding of common Git commands through dynamically generated graphs.
 
+![Git Vision Demo](git-vision.gif)
 # Commands
 
 ## Git Commands
